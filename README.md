@@ -49,9 +49,46 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 
+```python
 
+import numpy as np
 
-# Output : 
+# Number of arrivals (x)
+x = np.array([0, 1, 2, 3, 4, 5])
+
+# Frequency of arrivals (f)
+f = np.array([5, 12, 18, 10, 3, 2])
+
+# Total frequency
+N = np.sum(f)
+
+# Probability distribution P(x)
+P = f / N
+
+# Mean calculation
+mean = np.sum(x * P)
+
+# x^2 calculation
+x2 = x ** 2
+
+# E(x^2)
+Ex2 = np.sum(x2 * P)
+
+# Variance calculation
+variance = Ex2 - (mean ** 2)
+
+# Display results
+print("Value of x :", x)
+print("Frequency f :", f)
+print("Probability P(x) :", P)
+
+print("\nMean of the distribution =", round(mean, 4))
+print("Variance of the distribution =", round(variance, 4))
+```
+
+# Output :
+<img width="572" height="145" alt="image" src="https://github.com/user-attachments/assets/f58e2d34-0f66-47b7-9cc5-23234809f7ba" />
+
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
